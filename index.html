@@ -24,7 +24,7 @@
           <i class="fa-solid fa-bars" style="color:#FFD700"></i>
         </button>
         <div class="collapse navbar-collapse" id="navbarScroll">
-          <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll" style="max-height: 100px;">
+          <ul class="navbar-nav ml-auto my-2 my-lg-0 navbar-nav-scroll">
             <li class="nav-item active">
               <a class="nav-link" href="#">Home</a>
               <span></span>
@@ -231,12 +231,12 @@
         var NUMBER= document.getElementById('number').value;
         var EMAIL= document.getElementById('email').value;
         var Mailformat= /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
-        var Validname=/^[a-z0-9_.]+$/;
+        var Validname=/^[a-z0-9A-Z_. ]+$/;
         var Validnumber=/^\(?(\d{3})\)?[- ]?(\d{3})[- ]?(\d{4})$/;
 
         // name
         if(NAME){
-          if(Validname.test(NAME)==true){
+          if(Validname.test(NAME)==true || NAME.length>=6){
             document.getElementById('name').style="border:2px green solid";
             document.getElementById('nameerr2').style="visibility:hidden";
           document.getElementById('nameerr1').style="visibility:hidden; color:red";
